@@ -4,7 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
-<link rel='stylesheet' type='text/css' href='main.css'> 
+<link rel='stylesheet' type='text/css' href='main.css'>
 </head>
 
 
@@ -24,7 +24,7 @@
     </p>
     <input type="number" name="Dosa" min="0" max="20" id="vada">
   </div>
-  
+
   <div class="dessert">
     <p>Coffee  Rs 20<br />
     </p>
@@ -36,7 +36,7 @@
   <h2 id="total" >
   You haven't ordered anything yet!!
   </h2>
- 
+
 
 
 <script>
@@ -45,7 +45,7 @@
 };
 function myFunction()
 {
- var total =0; 
+ var total =0;
 var dosa = parseInt(document.getElementById('dosa').value) ;
 if(!isNaN(dosa))
 {
@@ -56,22 +56,22 @@ if(!isNaN(vada))
 {
   total=total + vada *30;
 }
-var coffee = parseInt(document.getElementById('coffee').value) * 20 ;
+var coffee = parseInt(document.getElementById('coffee').value) ;
 if(!isNaN(coffee))
 {
   total = total + coffee * 20;
 }
 
-//console.log(total);
+console.log(total);
 if(total!=0)
 {
 document.getElementById('total').innerHTML = "Your total is Rs" + total;
 }
+};
   </script>
 
-  
+
 
 
 </body>
 </html>
-
