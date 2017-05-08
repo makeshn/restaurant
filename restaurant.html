@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' type='text/css' href='main.css'> 
+</head>
+
+
+<body>
+
+  <h1>ABC Restaurant</h1>
+  <h2>Satiate your hunger..</h2>
+  <div class="first">
+    <p>Dosa  Rs 50<br />
+   </p>
+<input type="number" name="Dosa" min="0" max="20" id="dosa">
+
+  </div>
+
+  <div class="second">
+    <p>Vada  Rs 30<br />
+    </p>
+    <input type="number" name="Dosa" min="0" max="20" id="vada">
+  </div>
+  
+  <div class="dessert">
+    <p>Coffee  Rs 20<br />
+    </p>
+    <input type="number" name="Dosa" min="0" max="20" id="coffee">
+  </div>
+  <div class="wrapper">
+<button onclick="myFunction()">Order</button>
+ </div>
+  <h2 id="total" >
+  You haven't ordered anything yet!!
+  </h2>
+ 
+
+
+<script>
+    input.onkeypress=function(evt){
+    evt.preventDefault();
+};
+function myFunction()
+{
+ var total =0; 
+var dosa = parseInt(document.getElementById('dosa').value) ;
+if(!isNaN(dosa))
+{
+  total=total+dosa*50;
+}
+var vada = parseInt(document.getElementById('vada').value)  ;
+if(!isNaN(vada))
+{
+  total=total + vada *30;
+}
+var coffee = parseInt(document.getElementById('coffee').value) * 20 ;
+if(!isNaN(coffee))
+{
+  total = total + coffee * 20;
+}
+
+//console.log(total);
+if(total!=0)
+{
+document.getElementById('total').innerHTML = "Your total is Rs" + total;
+}
+  </script>
+
+  
+
+
+</body>
+</html>
+
